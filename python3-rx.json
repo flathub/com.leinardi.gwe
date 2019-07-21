@@ -1,14 +1,20 @@
 {
-    "name": "python3-rx",
-    "buildsystem": "simple",
-    "build-commands": [
-        "pip3 install --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} rx"
-    ],
-    "sources": [
-        {
-            "type": "file",
-            "url": "https://files.pythonhosted.org/packages/25/d7/9bc30242d9af6a9e9bf65b007c56e17b7dc9c13f86e440b885969b3bbdcf/Rx-1.6.1.tar.gz",
-            "sha256": "13a1d8d9e252625c173dc795471e614eadfe1cf40ffc684e08b8fff0d9748c23"
-        }
-    ]
+  "name": "python3-Rx",
+  "buildsystem": "simple",
+  "build-commands": [
+    "python3 setup.py install --prefix=/app --root=/"
+  ],
+  "sources": [
+    {
+      "type": "archive",
+      "url": "https://files.pythonhosted.org/packages/9b/27/87ab7fc16a00141e0570ef8fc38c84f09e0840c9ce38ea7f1a79a9b32bcb/Rx-3.0.1.tar.gz",
+      "sha256": "c7d168618e3cec35fda9c9c8b5d7f966739df4b1a99b315eae1fc2d7d69e2512"
+    },
+    {
+      "type": "shell",
+      "commands": [
+        "sed -i \"/pytest\\-runner/d\" setup.py"
+      ]
+    }
+  ]
 }

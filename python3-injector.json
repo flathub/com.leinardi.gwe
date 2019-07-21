@@ -1,14 +1,14 @@
 {
-    "name": "python3-injector",
-    "buildsystem": "simple",
-    "build-commands": [
-        "pip3 install --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} injector"
-    ],
-    "sources": [
-        {
-            "type": "file",
-            "url": "https://files.pythonhosted.org/packages/ca/1d/2676ec9d06723f6f118f5245b4b18ee9ed9ec2a21d1afcbcbe6097689f5b/injector-0.14.1.tar.gz",
-            "sha256": "1413e2b1dd90c594689bc292bcc02628b969840c1292131455927f292c65e99a"
-        }
-    ]
+  "name": "python3-injector",
+  "buildsystem": "simple",
+  "build-commands": [
+    "pip3 install --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} injector==0.17.0"
+  ],
+  "sources": [
+    {
+      "type": "file",
+      "url": "https://files.pythonhosted.org/packages/2a/d1/0dfdf9cbc160883d408d1f610ac75e0b10f0af5da74e4f9d5d9d4b2c38f7/injector-0.17.0.tar.gz",
+      "sha256": "882e91f8b4d693cfe29aa4eead3055480d7e2a6fb80a6a2c3b795650db720702"
+    }
+  ]
 }

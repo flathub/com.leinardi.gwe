@@ -1,19 +1,19 @@
 {
-    "name": "python3-py3nvml",
-    "buildsystem": "simple",
-    "build-commands": [
-        "pip3 install --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} py3nvml"
-    ],
-    "sources": [
-        {
-            "type": "file",
-            "url": "https://files.pythonhosted.org/packages/ee/51/76e7710e84aef9f4c134bdca0d400c93e01c328c76f4eb1b11f71ea846bd/py3nvml-0.2.2.tar.gz",
-            "sha256": "647c0131368d0bdb1d1796d3e10651240bae2c0cc89d193d19a6dccc1a81781d"
-        },
-        {
-            "type": "file",
-            "url": "https://files.pythonhosted.org/packages/57/17/a6acddc5f5993ea6eaf792b2e6c3be55e3e11f3b85206c818572585f61e1/xmltodict-0.11.0.tar.gz",
-            "sha256": "8f8d7d40aa28d83f4109a7e8aa86e67a4df202d9538be40c0cb1d70da527b0df"
-        }
-    ]
+  "name": "python3-py3nvml",
+  "buildsystem": "simple",
+  "build-commands": [
+    "pip3 install --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} py3nvml==0.2.3"
+  ],
+  "sources": [
+    {
+      "type": "file",
+      "url": "https://files.pythonhosted.org/packages/ee/63/59bf7e15b81c038b30931057cec2f3ce1d038a43be7b5b36809daa77229b/py3nvml-0.2.3.tar.gz",
+      "sha256": "0a7b32e01c4d94142e9d44d826cd3b9637f86aa4d4e0c18e26464aa1cb9949bf"
+    },
+    {
+      "type": "file",
+      "url": "https://files.pythonhosted.org/packages/58/40/0d783e14112e064127063fbf5d1fe1351723e5dfe9d6daad346a305f6c49/xmltodict-0.12.0.tar.gz",
+      "sha256": "50d8c638ed7ecb88d90561beedbf720c9b4e851a9fa6c47ebd64e99d166d8a21"
+    }
+  ]
 }
