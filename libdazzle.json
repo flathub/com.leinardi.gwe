@@ -8,8 +8,8 @@
     {
       "type": "git",
       "url": "https://gitlab.gnome.org/GNOME/libdazzle.git",
-      "tag": "3.31.4",
-      "commit": "4b8e745fc4c04e40f6355dfbc9689b6cb113496d"
+      "tag": "3.33.90",
+      "commit": "34aab60886fe81b37054d6611ab8ebd3e6f3ad8f"
     }
   ]
 }
