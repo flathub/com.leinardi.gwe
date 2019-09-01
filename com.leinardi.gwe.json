@@ -28,8 +28,8 @@
         {
           "type": "git",
           "url": "https://gitlab.com/leinardi/gwe.git",
-          "tag": "0.12.3",
-          "commit": "0d8ccc6a1e73d8e36ffca08e42c0754d93b9f1e6"
+          "tag": "0.13.0",
+          "commit": "ff07437c3733b7ca794a580acfbc67e26cae1612"
         }
       ]
     }
