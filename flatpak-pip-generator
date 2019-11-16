@@ -24,13 +24,15 @@ parser.add_argument('--requirements-file',
 parser.add_argument('--build-only', action='store_const',
                     dest='cleanup', const='all',
                     help='Clean up all files after build')
+parser.add_argument('--no-build-isolation',
+                    help='https://pip.pypa.io/en/stable/reference/pip/#pep-517-and-518-support')
 parser.add_argument('--output',
                     help='Specify output file name')
 opts = parser.parse_args()
 
 
 def get_pypi_url(name: str, filename: str) -> str:
-    url = 'https://pypi.python.org/pypi/{}/json'.format(name)
+    url = 'https://pypi.org/pypi/{}/json'.format(name)
     print('Extracting download url for', name)
     with urllib.request.urlopen(url) as response:
         body = json.loads(response.read().decode('utf-8'))
@@ -43,11 +45,20 @@ def get_pypi_url(name: str, filename: str) -> str:
 
 
 def get_package_name(filename: str) -> str:
-    segments = filename.split("-")
-    if len(segments) == 2:
-        return segments[0]
-    return "-".join(segments[:len(segments) - 1])
-
+    if filename.endswith(('bz2', 'gz', 'xz', 'zip')):
+        segments = filename.split("-")
+        if len(segments) == 2:
+            return segments[0]
+        return "-".join(segments[:len(segments) - 1])
+    elif filename.endswith('whl'):
+        segments = filename.split("-")
+        if len(segments) == 5:
+            return segments[0]
+        return "-".join(segments[:len(segments) - 4])
+    else:
+        raise Exception(
+            'Downloaded filename: {} does not end with bz2, gz, xz, zip, or whl'.format(filename)
+        )
 
 def get_file_hash(filename: str) -> str:
     sha = hashlib.sha256()
@@ -101,6 +112,8 @@ for package in packages:
             pip_install_prefix,
             shlex.quote(package)
         ]
+        if opts.no_build_isolation:
+            pip_command.append('--no-build-isolation')
         module = OrderedDict([
             ('name', package_name),
             ('buildsystem', 'simple'),
@@ -114,9 +127,18 @@ for package in packages:
             module['cleanup'] = ['/bin', '/share/man/man1']
 
         try:
-            subprocess.run(pip_download + [
-                '--no-binary', ':all:', package
-            ], check=True)
+            # May download the package twice, the first time it allows pip to
+            # select the preferred package, if the package downloaded is not
+            # platform generic, then it forces pip to download the sdist (using
+            # the --no-binary option).
+            subprocess.run(pip_download + [package], check=True)
+            for filename in os.listdir(tempdir):
+                name = get_package_name(filename)
+                if not filename.endswith(('gz', 'any.whl')):
+                    os.remove(os.path.join(tempdir, filename))
+                    subprocess.run(pip_download + [
+                        '--no-binary', ':all:', name
+                    ], check=True)
             for filename in os.listdir(tempdir):
                 name = get_package_name(filename)
                 if name == 'setuptools':  # Already installed
