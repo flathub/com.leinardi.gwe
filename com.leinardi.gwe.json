@@ -12,6 +12,12 @@
     "--talk-name=org.kde.StatusNotifierWatcher",
     "--talk-name=org.freedesktop.Flatpak"
   ],
+  "cleanup": [
+    "*.la",
+    "*.a",
+    "/include",
+    "/lib/pkgconfig"
+  ],
   "modules": [
     "shared-modules/dbus-glib/dbus-glib-0.110.json",
     "shared-modules/libappindicator/libappindicator-gtk3-introspection-12.10.json",
