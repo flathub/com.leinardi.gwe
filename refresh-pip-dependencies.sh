@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-./flatpak-pip-generator --requirements-file=../requirements.txt --output pypi-dependencies
+./flatpak-builder-tools/pip/flatpak-pip-generator --requirements-file=../requirements.txt --output pypi-dependencies
