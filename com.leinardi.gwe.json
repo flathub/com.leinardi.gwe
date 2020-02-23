@@ -34,8 +34,8 @@
         {
           "type": "git",
           "url": "https://gitlab.com/leinardi/gwe.git",
-          "tag": "0.13.3",
-          "commit": "7ac363f345f96e43da513560d5abf9426327c8b1"
+          "tag": "0.14.0",
+          "commit": "b2bd0d1b8e2af76829638414e277c81ecedea23b"
         }
       ]
     }
