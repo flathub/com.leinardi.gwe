@@ -12,13 +12,13 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/03/92/705fe8aca27678e01bbdd7738173b8e7df0088a2202c80352f664630d638/typing_extensions-3.7.4.1-py3-none-any.whl",
-                    "sha256": "cf8b63fedea4d89bab840ecbb93e75578af28f76f66c35889bd7065f5af88575"
+                    "url": "https://files.pythonhosted.org/packages/80/5f/c6ff0fb5ac88cb1776c95321fddf79e1766c595ae2b9e8ff75625b81762d/injector-0.18.3-py2.py3-none-any.whl",
+                    "sha256": "04c15a965504c4628873a56886950bd254102552a1d41ee983bfb1a7f7c7e7d6"
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/80/5f/c6ff0fb5ac88cb1776c95321fddf79e1766c595ae2b9e8ff75625b81762d/injector-0.18.3-py2.py3-none-any.whl",
-                    "sha256": "04c15a965504c4628873a56886950bd254102552a1d41ee983bfb1a7f7c7e7d6"
+                    "url": "https://files.pythonhosted.org/packages/0c/0e/3f026d0645d699e7320b59952146d56ad7c374e9cd72cd16e7c74e657a0f/typing_extensions-3.7.4.2-py3-none-any.whl",
+                    "sha256": "6e95524d8a547a91e08f404ae485bbb71962de46967e1b71a0cb89af24e761c5"
                 }
             ]
         },
@@ -91,13 +91,13 @@
             "name": "python3-peewee",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} peewee==3.13.1"
+                "pip3 install --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} peewee==3.13.2"
             ],
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/d4/30/0083f0e484902d118927236497c5f55c14a46c2a0e1b95083d26e5608371/peewee-3.13.1.tar.gz",
-                    "sha256": "9492af4d1f8e18a7fa0e930960315b38931286ea0f1659bbd5503456cffdacde"
+                    "url": "https://files.pythonhosted.org/packages/07/5f/a0813e99eacab8029b8bbe8c77b357934e55dd08a09e6f36ff77d89d943e/peewee-3.13.2.tar.gz",
+                    "sha256": "85f6696b6691a315646047e0b19e9a28258b35612b7121bc4eb1b61ff53c760a"
                 }
             ]
         },
@@ -105,32 +105,32 @@
             "name": "python3-py3nvml",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} py3nvml==0.2.5"
+                "pip3 install --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} py3nvml==0.2.6"
             ],
             "sources": [
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/e0/5e/9ae2fabc0004eb0187062c886a6ab8fd027fa9ff08d5ab153480a53e5e89/py3nvml-0.2.5-py3-none-any.whl",
-                    "sha256": "acd00728a9c0bc394e3d227213cd05e1f22023778c7dd39077843f71d5e03c55"
-                },
                 {
                     "type": "file",
                     "url": "https://files.pythonhosted.org/packages/28/fd/30d5c1d3ac29ce229f6bdc40bbc20b28f716e8b363140c26eff19122d8a5/xmltodict-0.12.0-py2.py3-none-any.whl",
                     "sha256": "8bbcb45cc982f48b2ca8fe7e7827c5d792f217ecf1792626f808bf41c3b86051"
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/53/b3/cb30dd8cc1198ae3fdb5a320ca7986d7ca76e23d16415067eafebff8685f/py3nvml-0.2.6-py3-none-any.whl",
+                    "sha256": "1840f20fe21c698f33f10bc37c4b7d486b9a21bf1a6088ca76c8981eab8801e5"
                 }
             ]
         },
         {
-            "name": "python3-pygobject",
+            "name": "python3-PyGObject",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} pygobject==3.34.0"
+                "pip3 install --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} PyGObject==3.36.0"
             ],
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/46/8a/b183f3edc812d4d28c8b671a922b5bc2863be5d38c56b3ad9155815e78dd/PyGObject-3.34.0.tar.gz",
-                    "sha256": "2acb0daf2b3a23a90f52066cc23d1053339fee2f5f7f4275f8baa3704ae0c543"
+                    "url": "https://files.pythonhosted.org/packages/3e/b5/f4fd3351ed074aeeae30bff71428f38bc42187e34c44913239a9dc85a7fc/PyGObject-3.36.0.tar.gz",
+                    "sha256": "b97f570e55017fcd3732164811f24ecf63983a4834f61b55b0aaf64ecefac856"
                 },
                 {
                     "type": "file",
@@ -143,13 +143,13 @@
             "name": "python3-python-xlib",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} python-xlib==0.26"
+                "pip3 install --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} python-xlib==0.27"
             ],
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/ca/37/1e6d9cd3454a25d5d6a72c8528d4c9cde2b2252a9628aefeec083c58184c/python_xlib-0.26-py2.py3-none-any.whl",
-                    "sha256": "244570b93cb82f5ceea3e4c861b4a0fffcea36947efa10fd63b7aa69d30047a8"
+                    "url": "https://files.pythonhosted.org/packages/33/10/2eb938852a9bdf6745808f141c9fede76b1bd5a9530859bacc71985d29d9/python_xlib-0.27-py2.py3-none-any.whl",
+                    "sha256": "b251d6679796af4ddabc02b170a5c38eda41f92a83d08fdcfeef5841c6467ac7"
                 },
                 {
                     "type": "file",
@@ -196,13 +196,13 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/b9/63/df50cac98ea0d5b006c55a399c3bf1db9da7b5a24de7890bc9cfd5dd9e99/certifi-2019.11.28-py2.py3-none-any.whl",
-                    "sha256": "017c25db2a153ce562900032d5bc68e9f191e44e9a0f762f373977de9df1fbb3"
+                    "url": "https://files.pythonhosted.org/packages/e8/74/6e4f91745020f967d09332bb2b8b9b10090957334692eb88ea4afe91b77f/urllib3-1.25.8-py2.py3-none-any.whl",
+                    "sha256": "2f3db8b19923a873b3e5256dc9c2dedfa883e33d87c690d9c7913e1f40673cdc"
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/e8/74/6e4f91745020f967d09332bb2b8b9b10090957334692eb88ea4afe91b77f/urllib3-1.25.8-py2.py3-none-any.whl",
-                    "sha256": "2f3db8b19923a873b3e5256dc9c2dedfa883e33d87c690d9c7913e1f40673cdc"
+                    "url": "https://files.pythonhosted.org/packages/57/2b/26e37a4b034800c960a00c4e1b3d9ca5d7014e983e6e729e33ea2f36426c/certifi-2020.4.5.1-py2.py3-none-any.whl",
+                    "sha256": "1d987a998c75633c40847cc966fcf5904906c920a7f17ef374f5aa4282abd304"
                 }
             ]
         },
@@ -210,13 +210,13 @@
             "name": "python3-Rx",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} Rx==3.0.1"
+                "pip3 install --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} Rx==3.1.0"
             ],
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/5b/ad/d93165ba4d6e02f6f6c7e84262444b62b646d5dd7d3a27f16530a2b1a8e5/Rx-3.0.1-py3-none-any.whl",
-                    "sha256": "00c4ab3ecd1ab9a55f310d05e20ae7f93d3cdd1150de5c56347e67a1ecd73963"
+                    "url": "https://files.pythonhosted.org/packages/28/0e/50160479e1afba49e2c860f8fbd022f115acd2c64da9b6460c949adb0b01/Rx-3.1.0.tar.gz",
+                    "sha256": "aaf409848e24dd514926eb8467e2764762bfd258325717fca4628d32d8721252"
                 }
             ]
         }
