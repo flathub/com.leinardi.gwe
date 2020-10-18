@@ -26,21 +26,29 @@
             "name": "python3-matplotlib",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"matplotlib==3.3.2\""
+                "pip3 install --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} numpy==1.17.5",
+                "pip3 install --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} matplotlib==3.1.3"
             ],
-            "build-options": {
-                "build-args": [ "--share=network" ]
-            },
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/2b/4c/fe4b36325795524f35d39edc390c89584e9a901df9e615df6f5effddaa0e/matplotlib-3.3.2.tar.gz",
-                    "sha256": "3d2edbf59367f03cd9daf42939ca06383a7d7803e3993eb5ff1bee8e8a3fbb6b"
+                    "url": "https://files.pythonhosted.org/packages/be/ed/5bbc91f03fa4c839c4c7360375da77f9659af5f7086b7a7bdda65771c8e0/python-dateutil-2.8.1.tar.gz",
+                    "sha256": "73ebfe9dbf22e832286dafa60473e4cd239f8592f699aa5adaf10050e6e1823c"
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/ee/ff/48bde5c0f013094d729fe4b0316ba2a24774b3ff1c52d924a8a4cb04078a/six-1.15.0-py2.py3-none-any.whl",
-                    "sha256": "8b74bedcbbbaca38ff6d7491d76f2b06b3592611af620f8426e82dddb04a5ced"
+                    "url": "https://files.pythonhosted.org/packages/c2/4b/137dea450d6e1e3d474e1d873cd1d4f7d3beed7e0dc973b06e8e10d32488/cycler-0.10.0.tar.gz",
+                    "sha256": "cd7b2d1018258d7247a71425e9f26463dfb444d411c39569972f4ce586b0c9d8"
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/a2/56/0404c03c83cfcca229071d3c921d7d79ed385060bbe969fde3fd8f774ebd/pyparsing-2.4.6.tar.gz",
+                    "sha256": "4c830582a84fb022400b85429791bc551f1f4871c33f23e44f353119e92f969f"
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/16/e7/df58eb8868d183223692d2a62529a594f6414964a3ae93548467b146a24d/kiwisolver-1.1.0.tar.gz",
+                    "sha256": "53eaed412477c836e1b9522c19858a8557d6e595077830146182225613b11a75"
                 },
                 {
                     "type": "file",
@@ -49,18 +57,23 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/5e/c4/6c4fe722df5343c33226f0b4e0bb042e4dc13483228b4718baf286f86d87/certifi-2020.6.20-py2.py3-none-any.whl",
-                    "sha256": "8fc0819f1f30ba15bdb34cceffb9ef04d99f420f68eb75d901e9560b8749fc41"
+                    "url": "https://files.pythonhosted.org/packages/be/74/24d058c17b155d131359f1cd01e120b3954686bf8b7853172b279237e1dc/matplotlib-3.1.3.tar.gz",
+                    "sha256": "db3121f12fb9b99f105d1413aebaeb3d943f269f3d262b45586d12765866f0c6"
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/74/15/93be74c3124ad183ea3f25251a66d3c7f8641065537973c276e81f703a0b/Pillow-8.0.0.tar.gz",
-                    "sha256": "59304c67d12394815331eda95ec892bf54ad95e0aa7bc1ccd8e0a4a5a25d4bf3"
+                    "url": "https://files.pythonhosted.org/packages/21/9f/b251f7f8a76dec1d6651be194dfba8fb8d7781d10ab3987190de8391d08e/six-1.14.0.tar.gz",
+                    "sha256": "236bdbdce46e6e6a3d61a337c0f8b763ca1e8717c03b369e87a7ec7ce1319c0a"
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/8a/bb/488841f56197b13700afd5658fc279a2025a39e22449b7cf29864669b15d/pyparsing-2.4.7-py2.py3-none-any.whl",
-                    "sha256": "ef9d7589ef3c200abe66653d3f1ab1033c3c419ae9b9bdb1240a85b024efc88b"
+                    "url": "https://files.pythonhosted.org/packages/5d/bc/1e58593167fade7b544bfe9502a26dc860940a79ab306e651e7f13be68c2/pyparsing-2.4.6-py2.py3-none-any.whl",
+                    "sha256": "c342dccb5250c08d45fd6f8b4a559613ca603b57498511740e65cd11a2e7dcec"
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/d9/09/8e89c05abc450ea347f40b4fa917ec5c69b5228da344487f178586a3187c/numpy-1.17.5.zip",
+                    "sha256": "16507ba6617f62ae3c6ab1725ae6f550331025d4d9a369b83f6d5a470446c342"
                 },
                 {
                     "type": "file",
@@ -69,28 +82,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/bf/e8/15aea783ea72e2d4e51e3ec365e8dc4a1a32c9e5eb3a6d695b0d58e67cdd/numpy-1.19.2.zip",
-                    "sha256": "0d310730e1e793527065ad7dde736197b705d0e4c9999775f212b03c44a8484c"
-                },
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/62/b8/db619d97819afb52a3ff5ff6ad3f7de408cc83a8ec2dfb31a1731c0a97c2/kiwisolver-1.2.0.tar.gz",
-                    "sha256": "247800260cd38160c362d211dcaf4ed0f7816afb5efe56544748b21d6ad6d17f"
-                },
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/d0/4a/22ee76842d8ffc123d4fc48d24a623c1d206b99968fe3960039f1efc2cbc/setuptools-49.1.3.zip",
-                    "sha256": "ea484041dc6495c4ee74dd578470866e3043f6d1c998cfafbdb1f668f1768284"
-                },
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/6c/9f/f501ba9d178aeb1f5bf7da1ad5619b207c90ac235d9859961c11829d0160/Cython-0.29.21.tar.gz",
-                    "sha256": "e57acb89bd55943c8d8bf813763d20b9099cc7165c0f16b707631a7654be9cad"
-                },
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/83/72/611c121b6bd15479cb62f1a425b2e3372e121b324228df28e64cc28b01c2/wheel-0.35.1.tar.gz",
-                    "sha256": "99a22d87add3f634ff917310a3d87e499f19e663413a52eb9232c447aa646c9f"
+                    "url": "https://files.pythonhosted.org/packages/65/eb/1f97cb97bfc2390a276969c6fae16075da282f5058082d4cb10c6c5c1dba/six-1.14.0-py2.py3-none-any.whl",
+                    "sha256": "8f3cd2e254d8f793e7f3d6d9df77b92252b52637291d0f0da013c76ea2724b6c"
                 }
             ]
         },
