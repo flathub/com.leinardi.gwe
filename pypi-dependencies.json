@@ -26,6 +26,7 @@
             "name": "python3-matplotlib",
             "buildsystem": "simple",
             "build-commands": [
+                "pip3 install --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"numpy\" --no-build-isolation",
                 "pip3 install --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"matplotlib==3.4.1\" --no-build-isolation"
             ],
             "sources": [
