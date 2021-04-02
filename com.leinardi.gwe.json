@@ -25,6 +25,7 @@
     "python3-setuptools.json",
     "python3-python-dateutil.json",
     "python3-certifi.json",
+    "python3-cppy.json",
     "pypi-dependencies.json",
     {
       "name": "gwe",
