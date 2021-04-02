@@ -26,9 +26,19 @@
             "name": "python3-matplotlib",
             "buildsystem": "simple",
             "build-commands": [
+                "pip3 install --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"numpy\" --no-build-isolation",
                 "pip3 install --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"matplotlib==3.4.1\" --no-build-isolation"
             ],
+            "build-options": {
+                "env": {
+                    "MPLSETUPCFG": "/run/build/python3-matplotlib/matplotlib-setup.cfg"
+                }
+            },
             "sources": [
+                {
+                    "type": "file",
+                    "path": "matplotlib-setup.cfg"
+                },
                 {
                     "type": "file",
                     "url": "https://files.pythonhosted.org/packages/82/a8/1e0f86ae3f13f7ce260e9f782764c16559917f24382c74edfb52149897de/numpy-1.20.2.zip",
@@ -96,25 +106,6 @@
                     "type": "file",
                     "url": "https://files.pythonhosted.org/packages/e9/fc/fbfcef3d0d1f63e0ce37e5746c5164f434e0cf9e6fe9525f362afd0df4a5/py3nvml-0.2.6.tar.gz",
                     "sha256": "98416c8b57136b81aba2007165f63717a10701f131347bfde7541524aba6d7cb"
-                }
-            ]
-        },
-        {
-            "name": "python3-PyGObject",
-            "buildsystem": "simple",
-            "build-commands": [
-                "pip3 install --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"PyGObject==3.38.0\" --no-build-isolation"
-            ],
-            "sources": [
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/9d/6e/499d6a6db416eb3cdf0e57762a269908e4ab6638a75a90972afc34885b91/pycairo-1.20.0.tar.gz",
-                    "sha256": "5695a10cb7f9ae0d01f665b56602a845b0a8cb17e2123bfece10c2e58552468c"
-                },
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/3a/a7/de282a4aaedba59d60a895a7821e6497b39cbdfa94a352776ff45ffc6e6f/PyGObject-3.38.0.tar.gz",
-                    "sha256": "051b950f509f2e9f125add96c1493bde987c527f7a0c15a1f7b69d6d1c3cd8e6"
                 }
             ]
         },
