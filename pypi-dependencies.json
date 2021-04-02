@@ -29,7 +29,16 @@
                 "pip3 install --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"numpy\" --no-build-isolation",
                 "pip3 install --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"matplotlib==3.4.1\" --no-build-isolation"
             ],
+            "build-options": {
+                "env": {
+                    "MPLSETUPCFG": "/run/build/python3-matplotlib/matplotlib-setup.cfg"
+                }
+            },
             "sources": [
+                {
+                    "type": "file",
+                    "path": "matplotlib-setup.cfg"
+                },
                 {
                     "type": "file",
                     "url": "https://files.pythonhosted.org/packages/82/a8/1e0f86ae3f13f7ce260e9f782764c16559917f24382c74edfb52149897de/numpy-1.20.2.zip",
