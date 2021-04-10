@@ -21,8 +21,11 @@
   "modules": [
     "shared-modules/libappindicator/libappindicator-gtk3-introspection-12.10.json",
     "libdazzle.json",
+    "qhull.json",
     "python3-setuptools.json",
     "python3-python-dateutil.json",
+    "python3-certifi.json",
+    "python3-cppy.json",
     "pypi-dependencies.json",
     {
       "name": "gwe",
@@ -34,8 +37,8 @@
         {
           "type": "git",
           "url": "https://gitlab.com/leinardi/gwe.git",
-          "tag": "0.15.2",
-          "commit": "ab1510f76072495e4811b868a1f03a22fb003ece"
+          "tag": "0.15.3",
+          "commit": "9888d4cd0103743034ef8e22ea091097d7b02d0f"
         }
       ]
     }
