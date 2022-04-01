@@ -2,7 +2,7 @@
   "app-id": "com.leinardi.gwe",
   "command": "gwe",
   "runtime": "org.gnome.Platform",
-  "runtime-version": "40",
+  "runtime-version": "42",
   "sdk": "org.gnome.Sdk",
   "finish-args": [
     "--share=ipc",
@@ -37,8 +37,8 @@
         {
           "type": "git",
           "url": "https://gitlab.com/leinardi/gwe.git",
-          "tag": "0.15.4",
-          "commit": "51c1742b22e47f051d2a12fbd53325c24c2e9456"
+          "tag": "0.15.5",
+          "commit": "21ca1e352f69de40477328c8e0bfd6ebed24ab6c"
         }
       ]
     }
