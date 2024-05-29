@@ -2,7 +2,7 @@
   "app-id": "com.leinardi.gwe",
   "command": "gwe",
   "runtime": "org.gnome.Platform",
-  "runtime-version": "44",
+  "runtime-version": "46",
   "sdk": "org.gnome.Sdk",
   "finish-args": [
     "--share=ipc",
@@ -22,11 +22,10 @@
     "shared-modules/libappindicator/libappindicator-gtk3-introspection-12.10.json",
     "libdazzle.json",
     "qhull.json",
-    "python3-setuptools.json",
-    "python3-python-dateutil.json",
-    "python3-certifi.json",
-    "python3-cppy.json",
+    "python3-pybind11.json",
+    "python3-meson-python.json",
     "python3-numpy.json",
+    "python3-cppy.json",
     "pypi-dependencies.json",
     {
       "name": "gwe",
@@ -38,8 +37,8 @@
         {
           "type": "git",
           "url": "https://gitlab.com/leinardi/gwe.git",
-          "tag": "0.15.6",
-          "commit": "c3f99cee13bc5df787189da00196e575bda37856"
+          "tag": "0.15.8",
+          "commit": "d7a50a4cb4a83501d28dac8621398629e70b3742"
         }
       ]
     }
