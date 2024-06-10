@@ -16,7 +16,12 @@
     "*.la",
     "*.a",
     "/include",
-    "/lib/pkgconfig"
+    "/lib/cmake",
+    "/lib/pkgconfig",
+    "/share/doc",
+    "/share/gir-1.0",
+    "/share/man",
+    "/share/vala"
   ],
   "modules": [
     "shared-modules/libappindicator/libappindicator-gtk3-introspection-12.10.json",
